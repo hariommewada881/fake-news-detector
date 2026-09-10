@@ -18,6 +18,14 @@ The system uses Natural Language Processing (NLP) and Machine Learning technique
 ## 🖥️ Application Screenshot
 
 ![AI-Based Fake News Detector](screenshots/home.jpeg)
+## 🚀 Live Demo
+
+The project currently runs locally using Flask.
+
+To start the application:
+
+```bash
+python app.py
 
 ## 🎯 Objective
 

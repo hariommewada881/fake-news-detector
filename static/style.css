@@ -1,14 +1,169 @@
 
 /* ============================= */
-/* BEAUTIFUL DESIGN ADDITIONS    */
-/* Existing CSS remains unchanged */
+/* BASIC PAGE DESIGN              */
+/* ============================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f5f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* ============================= */
+/* TEXT AREA                     */
+/* ============================= */
+
+textarea {
+    width: 90%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+/* ============================= */
+/* BUTTONS                       */
+/* ============================= */
+
+button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* ============================= */
+/* PREDICTION RESULT             */
+/* ============================= */
+
+.result {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.result.fake {
+    background: #fee2e2;
+    border: 2px solid #ef4444;
+}
+
+.result.real {
+    background: #dcfce7;
+    border: 2px solid #22c55e;
+}
+
+.result.fake h2 {
+    color: #dc2626;
+}
+
+.result.real h2 {
+    color: #16a34a;
+}
+
+.confidence {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ============================= */
+/* CONFIDENCE BAR                */
+/* ============================= */
+
+.progress-container {
+    width: 90%;
+    height: 20px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    margin: 15px auto 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #2563eb;
+    border-radius: 10px;
+}
+
+/* ============================= */
+/* PREDICTION HISTORY            */
+/* ============================= */
+
+.history {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.history h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #f1f5f9;
+}
+
+.fake-text {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.real-text {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+/* ============================= */
+/* BEAUTIFUL DESIGN              */
 /* ============================= */
 
 body {
     background: linear-gradient(135deg, #eef2ff, #fdf2f8, #ecfeff);
 }
 
-/* Main container enhancement */
+/* Main container */
 .container {
     border: 1px solid rgba(99, 102, 241, 0.15);
     backdrop-filter: blur(10px);
@@ -116,13 +271,12 @@ tr:hover td {
     background: linear-gradient(90deg, #6366f1, #a855f7);
 }
 
-/* Clear history section */
+/* Clear history */
 .clear-history {
     margin-top: 25px;
     text-align: center;
 }
 
-/* Clear history button */
 .clear-history button {
     background: linear-gradient(135deg, #ef4444, #f43f5e);
 }
@@ -131,7 +285,10 @@ tr:hover td {
     background: linear-gradient(135deg, #dc2626, #e11d48);
 }
 
-/* Mobile responsive design */
+/* ============================= */
+/* MOBILE RESPONSIVE DESIGN      */
+/* ============================= */
+
 @media (max-width: 600px) {
 
     .container {

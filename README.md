@@ -7,6 +7,17 @@ The **AI-Based Fake News Detection System** is a machine learning web applicatio
 The system uses **Natural Language Processing (NLP)** and **Machine Learning** techniques to analyze the text of a news article and provide a prediction along with a confidence percentage.
 
 ---
+# AI-Based Fake News Detection System
+
+## 📌 Project Description
+
+The AI-Based Fake News Detection System is a machine learning web application that predicts whether a given news article is REAL NEWS or FAKE NEWS.
+
+The system uses Natural Language Processing (NLP) and Machine Learning techniques to analyze the text of a news article and provide a prediction along with a confidence percentage.
+
+## 🖥️ Application Screenshot
+
+![AI-Based Fake News Detector](screenshots/home.jpeg)
 
 ## 🎯 Objective
 

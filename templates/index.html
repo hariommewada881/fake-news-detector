@@ -1,0 +1,142 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Detector</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI-Based Fake News Detector</h1>
+
+        <p class="subtitle">
+            Enter a news article and let the AI model analyze it.
+        </p>
+
+        <form method="POST">
+
+            <textarea
+                id="news"
+                name="news"
+                rows="10"
+                placeholder="Enter news article here..."
+                required
+            ></textarea>
+
+            <br>
+
+            <button type="submit">Predict News</button>
+
+            <button
+                type="button"
+                onclick="clearNews()"
+            >
+                Clear
+            </button>
+
+        </form>
+
+
+        {% if prediction %}
+
+        <div class="result {{ result_class }}">
+
+            <h2>{{ prediction }}</h2>
+
+            <p class="confidence">
+                Confidence: {{ confidence }}%
+            </p>
+
+            <div class="progress-container">
+
+                <div
+                    class="progress-bar"
+                    style="width: {{ confidence }}%;"
+                ></div>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+
+        <!-- Prediction History -->
+
+        <div class="history">
+
+            <h2>Prediction History</h2>
+
+            {% if history %}
+
+            <table>
+
+                <tr>
+                    <th>ID</th>
+                    <th>News</th>
+                    <th>Prediction</th>
+                    <th>Confidence</th>
+                </tr>
+
+                {% for item in history %}
+
+                <tr>
+
+                    <td>{{ item[0] }}</td>
+
+                    <td>{{ item[1] }}</td>
+
+                    <td class="{{ 'fake-text' if item[2] == 'FAKE NEWS' else 'real-text' }}">
+                        {{ item[2] }}
+                    </td>
+
+                    <td>{{ item[3] }}%</td>
+
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+            {% else %}
+
+            <p>No prediction history yet.</p>
+
+            {% endif %}
+
+        </div>
+
+
+        <!-- Clear History Button -->
+
+        <div class="clear-history">
+
+            <a href="/clear-history"
+               onclick="return confirm('Are you sure you want to clear all prediction history?');">
+
+                <button type="button">
+                    Clear History
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function clearNews() {
+            document.getElementById("news").value = "";
+        }
+
+    </script>
+
+</body>
+</html>
+```

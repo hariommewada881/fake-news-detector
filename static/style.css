@@ -1,0 +1,159 @@
+
+/* ============================= */
+/* BEAUTIFUL DESIGN ADDITIONS    */
+/* Existing CSS remains unchanged */
+/* ============================= */
+
+body {
+    background: linear-gradient(135deg, #eef2ff, #fdf2f8, #ecfeff);
+}
+
+/* Main container enhancement */
+.container {
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+/* Heading */
+h1 {
+    color: #312e81;
+    font-size: 36px;
+    letter-spacing: 0.5px;
+}
+
+/* Subtitle */
+.subtitle {
+    color: #64748b;
+    font-size: 17px;
+}
+
+/* Text area */
+textarea {
+    background: #f8fafc;
+    color: #1e293b;
+    border: 2px solid #c7d2fe;
+    outline: none;
+    transition: 0.3s;
+}
+
+textarea:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+/* All buttons */
+button {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.25);
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+}
+
+/* Prediction result */
+.result {
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+/* History section */
+.history {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+/* Table */
+table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+}
+
+th {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    font-size: 15px;
+}
+
+td {
+    color: #334155;
+    background: #ffffff;
+}
+
+tr:hover td {
+    background: #f5f3ff;
+}
+
+/* Fake news text */
+.fake-text {
+    color: #dc2626;
+    font-weight: bold;
+    background: #fef2f2;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+/* Real news text */
+.real-text {
+    color: #16a34a;
+    font-weight: bold;
+    background: #f0fdf4;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+/* Confidence bar */
+.progress-container {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+}
+
+/* Clear history section */
+.clear-history {
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* Clear history button */
+.clear-history button {
+    background: linear-gradient(135deg, #ef4444, #f43f5e);
+}
+
+.clear-history button:hover {
+    background: linear-gradient(135deg, #dc2626, #e11d48);
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+
+    .container {
+        width: 85%;
+        padding: 25px;
+        margin: 30px auto;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    textarea {
+        width: 90%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}

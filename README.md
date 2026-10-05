@@ -1,252 +1,252 @@
 # AI-Based Fake News Detection System
 
-## 📌 Project Description
+## 📌 Project Overview
 
-The **AI-Based Fake News Detection System** is a machine learning web application that predicts whether a given news article is **REAL NEWS** or **FAKE NEWS**.
+The **AI-Based Fake News Detection System** is a Machine Learning and Natural Language Processing (NLP) based web application that analyzes news articles and predicts whether the given news is **REAL NEWS** or **FAKE NEWS**.
 
-The system uses **Natural Language Processing (NLP)** and **Machine Learning** techniques to analyze the text of a news article and provide a prediction along with a confidence percentage.
-
----
-# AI-Based Fake News Detection System
-
-## 📌 Project Description
-
-The AI-Based Fake News Detection System is a machine learning web application that predicts whether a given news article is REAL NEWS or FAKE NEWS.
-
-The system uses Natural Language Processing (NLP) and Machine Learning techniques to analyze the text of a news article and provide a prediction along with a confidence percentage.
-
-## 🖥️ Application Screenshot
-
-![AI-Based Fake News Detector](screenshots/home.jpeg)
-## 🚀 Live Demo
-
-The project currently runs locally using Flask.
-
-To start the application:
-
-```bash
-python app.py
-
-## 🎯 Objective
-
-The main objective of this project is to develop an AI-based system that can automatically classify news articles as real or fake.
+The application provides a simple web interface where users can enter a news article and receive a prediction along with the model's confidence score.
 
 ---
 
-## 🛠️ Technologies Used
+## 🎓 Academic Submission Note
 
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* Natural Language Processing (NLP)
-* TF-IDF Vectorization
-* Logistic Regression
-* Flask
-* HTML
-* CSS
-* JavaScript
-* SQLite
-* Joblib
+This project was selected from an existing open-source GitHub project as part of an academic project assignment.
 
----
+The project was:
 
-## 🤖 Machine Learning Workflow
+- Set up and executed locally.
+- Tested successfully using the Flask web application.
+- Customized and improved for academic submission.
+- Published in a separate GitHub repository.
+- Documented with project details and usage instructions.
 
-The project follows these steps:
+The original project attribution and license have been retained.
 
-1. Load the Fake News and True News datasets.
-2. Add labels to the datasets.
-3. Combine both datasets.
-4. Shuffle the data.
-5. Combine the news title and text.
-6. Split the data into training and testing sets.
-7. Convert text into numerical features using **TF-IDF Vectorization**.
-8. Train a **Logistic Regression** machine learning model.
-9. Evaluate the model using accuracy and classification metrics.
-10. Save the trained model and TF-IDF vectorizer using Joblib.
-11. Use Flask to create a web application.
-12. Display the prediction and confidence percentage.
-13. Store prediction history in an SQLite database.
+**Original Project:**  
+https://github.com/Suni-sunitha/fake-news-detector
 
 ---
 
-## 📊 Dataset
+## 🎯 Objectives
 
-The project uses the **ISOT Fake News Dataset**, containing:
+The main objectives of this project are:
 
-* `Fake.csv` – Fake news articles
-* `True.csv` – Real news articles
-
-Labels used:
-
-* `0` → Fake News
-* `1` → Real News
-
----
-
-## 🧠 Machine Learning Model
-
-### TF-IDF
-
-**TF-IDF (Term Frequency-Inverse Document Frequency)** converts news text into numerical values that can be understood by the machine learning model.
-
-### Logistic Regression
-
-Logistic Regression is used to classify the news article into two categories:
-
-* Fake News
-* Real News
-
----
-
-## 📈 Model Accuracy
-
-The model achieved approximately:
-
-**98.45% accuracy** on the test data from the dataset used in this project.
-
-> Note: This accuracy is based on the project's dataset and train-test split. It does not guarantee that every real-world news article will be classified correctly.
+1. To understand the application of Machine Learning in fake news detection.
+2. To use Natural Language Processing for analyzing news text.
+3. To extract useful text features using TF-IDF.
+4. To classify news articles as real or fake.
+5. To provide predictions through a user-friendly Flask web application.
+6. To understand how an existing Machine Learning project can be deployed and customized.
 
 ---
 
 ## ✨ Features
 
-* 📰 Enter or paste a news article
-* 🤖 AI-based fake/real prediction
-* 📊 Confidence percentage
-* 📈 Visual confidence bar
-* 🗂️ Prediction history
-* 🗑️ Clear input option
-* 🧹 Clear prediction history
-* 🌐 User-friendly web interface
-* 💾 SQLite database for storing predictions
+- 📰 Fake News / Real News classification
+- 🤖 Machine Learning based prediction
+- 📝 Natural Language Processing
+- 📊 TF-IDF text feature extraction
+- 📈 Prediction confidence score
+- 📋 Prediction history
+- 🧹 Clear input option
+- 🔄 Clear prediction history
+- 🔢 Live character counter
+- ℹ️ About Project section
+- 🌐 Flask-based web interface
 
 ---
 
-## 📁 Project Structure
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Main programming language |
+| Flask | Web application framework |
+| Scikit-learn | Machine Learning |
+| NLP | Text processing |
+| TF-IDF | Text feature extraction |
+| Pandas | Dataset processing |
+| NumPy | Numerical operations |
+| Joblib | Model serialization |
+| HTML | Web page structure |
+| CSS | Web page styling |
+| SQLite | Prediction history storage |
+
+---
+
+## 🔄 Machine Learning Workflow
+
+The system follows the following workflow:
 
 ```text
+News Article
+     ↓
+Text Preprocessing
+     ↓
+TF-IDF Feature Extraction
+     ↓
+Trained Machine Learning Model
+     ↓
+Prediction
+     ↓
+REAL NEWS / FAKE NEWS
+     ↓
+Confidence Score
+📂 Dataset
+
+The project uses the ISOT Fake News Dataset, containing examples of real and fake news articles.
+
+The dataset files included in the project are:
+
+Fake.csv
+True.csv
+
+These datasets are used for training/testing the Machine Learning model.
+
+📁 Project Structure
 fake-news-detector/
 │
+├── screenshots/
+│
+├── static/
+│   └── style.css
+│
+├── templates/
+│   └── index.html
+│
+├── .gitignore
 ├── app.py
 ├── Fake.csv
 ├── True.csv
 ├── fake_news_model.pkl
 ├── tfidf_vectorizer.pkl
 ├── history.db
-├── README.md
-│
-├── templates/
-│   └── index.html
-│
-└── static/
-    └── style.css
-```
-
----
-
-## ⚙️ Installation
-
-### 1. Clone or download the project
-
-Open the project folder in VS Code.
-
-### 2. Create a virtual environment
-
-```bash
-python -m venv venv
-```
-
-### 3. Activate the virtual environment
-
-For Windows PowerShell:
-
-```bash
-venv\Scripts\Activate.ps1
-```
-
-### 4. Install required libraries
-
-```bash
-pip install pandas numpy scikit-learn joblib flask
-```
-
----
-
-## ▶️ How to Run the Project
-
-Open the VS Code terminal and activate the virtual environment:
-
-```bash
-venv\Scripts\Activate.ps1
-```
-
-Then run:
-
-```bash
+├── requirements.txt
+├── LICENSE
+└── README.md
+⚙️ Installation and Setup
+1. Clone the Repository
+git clone https://github.com/hariommewada881/fake-news-detector.git
+2. Open the Project Folder
+cd fake-news-detector
+3. Install Required Libraries
+pip install -r requirements.txt
+4. Run the Flask Application
 python app.py
-```
+5. Open the Application
 
-The Flask application will start.
+Open the following address in a web browser:
 
-Open the following address in your browser:
-
-```text
 http://127.0.0.1:5000
-```
+🧪 Testing
 
----
+The application was tested locally by entering different news articles into the input box.
 
-## 🖥️ How the Application Works
+The system returns:
 
-1. User enters a news article.
-2. The Flask application receives the article.
-3. The TF-IDF vectorizer converts the text into numerical features.
-4. The trained Logistic Regression model analyzes the features.
-5. The system predicts **REAL NEWS** or **FAKE NEWS**.
-6. The confidence percentage is displayed.
-7. The prediction is stored in the SQLite database.
-8. Previous predictions are displayed in the history section.
+Prediction: REAL NEWS
+Confidence: XX.XX%
 
----
+or
 
-## 🔮 Future Improvements
+Prediction: FAKE NEWS
+Confidence: XX.XX%
 
-* Use advanced NLP models such as BERT.
-* Improve performance using larger and more diverse datasets.
-* Add multilingual fake news detection.
-* Add news source verification.
-* Add URL-based news analysis.
-* Deploy the application online.
-* Improve real-world fact verification.
+The prediction result is displayed directly on the web interface.
 
----
+🔧 Customizations Made
 
-## 🎓 Project Purpose
+For the academic submission, the original project was customized and tested locally.
 
-This project was developed as an **AI/ML academic and portfolio project** to demonstrate practical knowledge of:
+The following improvements were made:
 
-* Python
-* Machine Learning
-* NLP
-* Data preprocessing
-* Model training
-* Flask web development
-* Database integration
+1. User Interface Customization
 
----
+The main heading and descriptions were updated to provide a more professional project interface.
 
-## 👩‍💻 Author
+2. About Project Section
 
-**Sunitha**
+An About This Project section was added to explain the purpose, Machine Learning approach, and technologies used.
 
-B.Tech – Computer Science and Engineering (AI & ML)
+3. Live Character Counter
 
----
+A live character counter was added to the news input area.
 
-## 📌 Conclusion
+The counter automatically updates as the user enters or removes text.
 
-The AI-Based Fake News Detection System demonstrates how **Machine Learning and Natural Language Processing** can be combined with a **Flask web application** to classify news articles.
+Example:
 
-The project provides a simple and user-friendly interface for analyzing news and viewing prediction results.
+Characters: 125
+4. Improved User Interaction
+
+The input and prediction interface was updated with clearer button labels and instructions.
+
+📊 Model Performance
+
+The original project reports approximately 98.45% test accuracy under its stated dataset and evaluation setup.
+
+Actual performance can vary depending on the dataset, preprocessing, training process, and evaluation methodology.
+
+Therefore, the reported accuracy should not be considered a guarantee of performance on new or unseen news articles.
+
+🎓 Learning Outcomes
+
+Through this project, the following concepts were practiced:
+
+Python programming
+Machine Learning
+Natural Language Processing
+Text classification
+TF-IDF feature extraction
+Flask web development
+Model deployment
+Git and GitHub
+Project customization
+Testing and debugging
+🚀 Future Improvements
+
+Possible future improvements include:
+
+Adding more recent news datasets.
+Improving text preprocessing.
+Testing multiple Machine Learning algorithms.
+Adding deep learning models.
+Improving the user interface.
+Adding multilingual fake news detection.
+Improving prediction explainability.
+Deploying the application on a cloud platform.
+📌 Project Purpose
+
+This project demonstrates how Machine Learning and NLP can be applied to the problem of detecting potentially fake news.
+
+It also provides practical experience in taking an existing open-source project, setting it up locally, understanding its components, making modifications, testing the application, and maintaining the modified version using GitHub.
+
+📜 Original Project Attribution
+
+This academic submission is based on the following original open-source project:
+
+Suni-sunitha/fake-news-detector
+
+https://github.com/Suni-sunitha/fake-news-detector
+
+The original attribution and project license have been retained.
+
+✅ Conclusion
+
+The AI-Based Fake News Detection System provides a simple way to classify news articles using Machine Learning and Natural Language Processing.
+
+The project was successfully configured, tested, customized, and maintained in a separate GitHub repository for academic submission.
+
+
+### Ab tumhe kya karna hai
+
+VS Code me:
+
+**`fake-news-detector → README.md`**
+
+open karo → **Ctrl + A** → upar wala पूरा content paste karo → **Ctrl + S**.
+
+Uske baad terminal me:
+
+```powershell
+git status
